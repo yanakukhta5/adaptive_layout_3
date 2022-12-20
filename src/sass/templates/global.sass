@@ -1,0 +1,48 @@
+body
+ min-height: 100vh
+ display: flex
+ font-family: $semibold
+ flex-direction: column
+ background-color: $lightest
+ color: $textColor
+ font-size: $base-font-size
+
+.unactive
+ overflow: hidden
+ 
+a
+ cursor: pointer
+
+.top
+ flex: 1 1 auto
+
+.hidden
+ display: none
+
+._container
+ max-width: 1240px
+ padding: 0px 20px
+ min-height: 100%
+ margin: auto
+ &__mobile
+  @media (max-width: $start)
+   padding: 0
+
+.content 
+ display: unset
+ gap: 2.5%
+ overflow: auto
+
+.main
+ margin-left: 30px
+ @media (max-width: $sm)
+  margin-left: 0px
+ &-top
+  display: flex
+  justify-content: space-between
+  @media (max-width: $sm)
+   flex-direction: column
+   row-gap: 20px
+ &-bottom
+  margin-top: 17px
+  border-radius: $cardBorderRadius

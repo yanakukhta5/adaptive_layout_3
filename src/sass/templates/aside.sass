@@ -1,0 +1,92 @@
+.aside
+ width: 234px
+ height: 600px
+ padding: 16px 16px 0px 16px
+ background-color: $cardBG
+ border-radius: $cardBorderRadius
+ color: $textColor
+ position: sticky
+ margin-right: 2%
+ top: 15px
+ font-size: 16px
+ transition: all 0.3s ease-in-out
+ @media (max-width: $sm)
+  width: 50vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: -70vw
+  padding: 16px
+  border-radius: 0
+  z-index: 6
+ @media (max-width: $start)
+  width: 70vw
+ &__active
+  @media (max-width: $sm)
+   left: 0
+ &::after
+  content: ''
+  display: block
+  position: relative
+  left: -16px
+  top: -76px
+  width: 234px
+  height: 1px
+  background-color: $lightGray
+  @media (max-width: $sm)
+   width: 70vw
+   top: -60px
+ &-icon
+  width: 20px
+  fill: $textColor
+  height: 20px
+  &__stroke
+   stroke: $textColor
+   stroke-width: 2px
+   fill: none
+  &__settings
+   stroke-width: 1px
+  &__favorite
+   fill: $textColor
+
+
+ &-text
+  font-family: 'Gilroy-Medium'
+  text-transform: capitalize
+
+
+ &-li
+  overflow: hidden
+  &__exit
+   margin-top: 30px
+   @media (max-width: $sm)
+    margin-top: 20px
+  &:hover
+   border-radius: $cardBorderRadius
+   color: $accent
+   & .aside-icon
+    fill: $accent
+    &__stroke
+     fill: none
+     stroke: $accent
+    &__favorite
+     fill: $accent
+  &__active
+   color: $primary
+   & .aside-icon
+    fill: $primary
+
+
+ &-link
+  padding: 20px 40px
+  display: flex
+  align-items: center
+  gap: 15px
+  color: inherit
+  @media (max-width: $sm)
+   padding: 15px 
+  &:hover
+   background-color: $lightest
+   cursor: pointer
+  &:active
+   background-color: $lightBlue

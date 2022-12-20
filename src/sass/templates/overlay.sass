@@ -1,0 +1,53 @@
+
+.overlay
+ width: 100vw
+ height: 100vh
+ background-color: rgba(0, 0, 0, 0.7)
+ position: fixed
+ top: 0
+ left: 0
+ z-index: 4
+ display: none
+
+ &__show
+  display: flex
+  align-items: center
+
+ &-swipe
+  fill: $lightest
+  position: relative
+  width: 140px
+  animation-name: swipe
+  animation-duration: 2s
+  animation-timing-function: cubic-bezier(0, 0.67, 0.58, 1)
+  animation-delay: 0s
+  animation-iteration-count: infinite
+  animation-direction: normal
+
+ &-content
+  display: flex
+  flex-direction: column
+  z-index: 4
+  font-size: 30px
+  font-family: $medium
+  color: $lightest
+  align-items: center
+  padding: 0px 20px
+  text-align: center
+
+ &-button
+  background-color: $lightest
+  border: 0px
+  margin-top: 20px
+  border-radius: $cardBorderRadius
+  padding: 20px 40px
+  font-size: 20px
+
+@keyframes swipe
+ 0%
+  left: -30%
+ 60%
+  left: 30%
+ 100%
+  //opacity: 0
+  left: 30%
