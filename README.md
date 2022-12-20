@@ -6,3 +6,5 @@ Layout was made by me without using librales
 Два режима работы gulp (если нужно):
 ### gulp
 ### gulp prod --prod
+
+адаптив на десктоп и мобильники 320px-570px
